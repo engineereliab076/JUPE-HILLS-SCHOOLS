@@ -981,7 +981,6 @@ figcaption {
 .center .section-title::after { margin-inline: auto; }
 
 .feature-grid,
-.news-grid,
 .staff-grid,
 .resource-grid,
 .values-grid {
@@ -990,12 +989,10 @@ figcaption {
 }
 
 .feature-card,
-.news-card,
 .staff-card,
 .resource-card,
 .value-card,
-.event-card,
-.quote-card {
+.event-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 3px 16px rgb(31 44 71 / 0.09);
@@ -1005,27 +1002,18 @@ figcaption {
 .feature-card,
 .resource-card,
 .value-card,
-.event-card,
-.quote-card { padding: 1.4rem; }
+.event-card { padding: 1.4rem; }
 .feature-card h3, .resource-card h3, .value-card h3, .event-card h3 { margin-block-end: 0.35rem; }
 .feature-card p:last-child, .resource-card p:last-child, .value-card p:last-child, .event-card p:last-child { margin-block-end: 0; }
 .feature-icon { inline-size: 48px; block-size: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--sky-wash); color: var(--maroon); font-family: var(--font-display); font-weight: 800; margin-block-end: 1rem; }
 
-.news-card img, .staff-card img { inline-size: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-.news-card__body, .staff-card__body { padding: 1.25rem; }
-.news-card time, .event-date { color: var(--maroon); font-weight: 700; font-size: 0.92rem; }
-.news-card h3 a { color: var(--navy); text-decoration: none; }
-.news-card h3 a:hover { color: var(--maroon); }
+.staff-card img { inline-size: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.staff-card__body { padding: 1.25rem; }
+.event-date { color: var(--maroon); font-weight: 700; font-size: 0.92rem; }
 
-.event-list { display: grid; gap: 1rem; }
 .event-card { display: grid; grid-template-columns: 74px 1fr; gap: 1rem; align-items: start; }
 .event-date { text-align: center; border-inline-end: 2px solid var(--sky); padding-inline-end: 1rem; }
 .event-date strong { display: block; font-family: var(--font-display); font-size: 1.8rem; line-height: 1; }
-
-.quote-grid { display: grid; gap: 1.25rem; }
-.quote-card blockquote { margin: 0; }
-.quote-card blockquote::before { content: "“"; display: block; color: var(--gold); font-family: Georgia, serif; font-size: 4rem; line-height: 0.6; }
-.quote-card cite { display: block; margin-block-start: 1rem; color: var(--maroon); font-style: normal; font-weight: 700; }
 
 .cta-banner { background: var(--maroon); color: #fff; border-radius: 16px; padding: clamp(1.5rem, 5vw, 3rem); display: grid; gap: 1.5rem; align-items: center; }
 .cta-banner h2 { color: #fff; margin-block-end: 0.25rem; }
@@ -1082,13 +1070,6 @@ details p { margin-block: 0.75rem 0; max-inline-size: 68ch; }
 .filter-btn.is-active, .filter-btn:hover { background: var(--maroon); color: #fff; }
 [data-gallery-category][hidden] { display: none; }
 
-.article-layout { display: grid; gap: 2rem; }
-.article-body { max-inline-size: 72ch; }
-.article-body img { border-radius: 12px; margin-block: 1.5rem; }
-.article-meta { color: var(--caption); }
-.archive-list { list-style: none; padding: 0; }
-.archive-list li { padding-block: 0.8rem; border-block-end: 1px solid #c7d4df; }
-
 .video-placeholder { min-block-size: 260px; border: 2px dashed #8ea2b8; border-radius: 12px; background: var(--sky-wash); display: grid; place-items: center; text-align: center; padding: 2rem; }
 .back-to-top { position: fixed; z-index: 40; inset-inline-end: 1rem; inset-block-end: 1rem; inline-size: 48px; block-size: 48px; border-radius: 50%; background: var(--maroon); color: #fff; text-decoration: none; display: grid; place-items: center; box-shadow: 0 4px 14px rgb(31 44 71 / 0.28); opacity: 0; visibility: hidden; transform: translateY(10px); transition: 0.2s ease; }
 .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; }
@@ -1102,14 +1083,13 @@ details p { margin-block: 0.75rem 0; max-inline-size: 68ch; }
 
 @media (min-width: 680px) {
   .feature-grid, .values-grid, .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .news-grid, .staff-grid, .quote-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .staff-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cta-banner { grid-template-columns: 1fr auto; }
 }
 
 @media (min-width: 920px) {
   .feature-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .article-layout { grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); }
 }
 
 /* ---------- motion ---------- */

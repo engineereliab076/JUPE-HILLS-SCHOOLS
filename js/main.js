@@ -12,7 +12,7 @@
   if (footer && footerLegal && !footer.querySelector(".footer-signup")) {
     var footerSignup = document.createElement("div");
     footerSignup.className = "shell footer-signup";
-    footerSignup.innerHTML = '<div><h2>School updates</h2><p>Receive term reminders and important news by email.</p></div><form class="inline-form" data-form="newsletter" novalidate><div><label for="footer-email">Email address</label><input id="footer-email" name="email" type="email" autocomplete="email" required placeholder="parent@example.com"></div><button class="btn btn--solid" type="submit">Subscribe</button><p class="form-message" role="status" aria-live="polite"></p></form><p class="footer-social">Social media: <span>Facebook</span> · <span>Instagram</span> · <span>YouTube</span> <small>(official links pending)</small></p>';
+    footerSignup.innerHTML = '<div><h2>School updates</h2><p>Receive term reminders and important updates by email.</p></div><form class="inline-form" data-form="newsletter" novalidate><div><label for="footer-email">Email address</label><input id="footer-email" name="email" type="email" autocomplete="email" required placeholder="parent@example.com"></div><button class="btn btn--solid" type="submit">Subscribe</button><p class="form-message" role="status" aria-live="polite"></p></form><p class="footer-social">Social media: <span>Facebook</span> · <span>Instagram</span> · <span>YouTube</span> <small>(official links pending)</small></p>';
     footer.insertBefore(footerSignup, footerLegal);
   }
 
@@ -97,16 +97,16 @@
       }
 
       var kind = form.dataset.form;
-      if (kind === "contact" || kind === "admission") {
+      if (kind === "contact") {
         var data = new FormData(form);
-        var subject = kind === "admission" ? "Admission inquiry" : (data.get("subject") || "Website message");
+        var subject = data.get("subject") || "Website message";
         var body = Array.from(data.entries()).map(function (entry) {
           return entry[0] + ": " + entry[1];
         }).join("\n");
         window.location.href = "mailto:nyagwaswafaith@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
         if (message) {
           message.className = "form-message is-success";
-          message.textContent = "Your email app is opening with the message prepared. Send it to complete your inquiry.";
+          message.textContent = "Your email app is opening with the message prepared. Send it to complete your message.";
         }
       } else {
         if (message) {

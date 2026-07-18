@@ -30,12 +30,9 @@ Line numbers below should be refreshed after major content edits.
   qualification, years of experience and short biography (`staff.html:10`).
 - Confirm support staff roles and details (`staff.html:12`, `staff.html:14`).
 
-## News, events and parent information
+## Parent information
 
-- Replace provisional news dates, articles and event dates with approved content
-  (`index.html:402`, `news.html:8`, `news.html:10`, `news-article.html:5`).
 - Replace demo testimonials with approved parent quotes (`index.html:415`).
-- Add approved newsletter PDF files and summaries (`news.html:14`).
 - Replace policy summaries with approved policy documents (`parents.html:10`).
 - Replace provisional term dates with the official annual calendar
   (`parents.html:12`).

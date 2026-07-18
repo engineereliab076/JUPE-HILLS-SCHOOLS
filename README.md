@@ -11,8 +11,6 @@ not need a framework or build step.
 - `admissions.html` — entry requirements, process, fees, PDF and inquiry form
 - `academics.html` — programmes, subjects, teaching approach and calendar
 - `staff.html` — leadership, teaching staff and support staff
-- `news.html` — news, events calendar and newsletter archive
-- `news-article.html` — an individual news article template
 - `gallery.html` — filterable, keyboard-accessible photo gallery and lightbox
 - `parents.html` — policies, dates, uniform, fees and parent FAQ
 - `contact.html` — contact details, email form and lazy-loaded map
