@@ -9,7 +9,7 @@
 
   var footer = document.querySelector(".site-footer");
   var footerLegal = document.querySelector(".footer-legal");
-  if (footer && footerLegal && !footer.querySelector(".footer-signup")) {
+  if (footer && footerLegal && !footer.hasAttribute("data-no-signup") && !footer.querySelector(".footer-signup")) {
     var footerSignup = document.createElement("div");
     footerSignup.className = "shell footer-signup";
     footerSignup.innerHTML = '<div><h2>School updates</h2><p>Receive term reminders and important updates by email.</p></div><form class="inline-form" data-form="newsletter" novalidate><div><label for="footer-email">Email address</label><input id="footer-email" name="email" type="email" autocomplete="email" required placeholder="parent@example.com"></div><button class="btn btn--solid" type="submit">Subscribe</button><p class="form-message" role="status" aria-live="polite"></p></form><p class="footer-social">Social media: <span>Facebook</span> · <span>Instagram</span> · <span>YouTube</span> <small>(official links pending)</small></p>';
