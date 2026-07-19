@@ -120,21 +120,6 @@
     });
   });
 
-  var filterButtons = document.querySelectorAll("[data-gallery-filter]");
-  var galleryItems = document.querySelectorAll("[data-gallery-category]");
-  filterButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      var filter = button.dataset.galleryFilter;
-      filterButtons.forEach(function (item) {
-        item.classList.toggle("is-active", item === button);
-        item.setAttribute("aria-pressed", String(item === button));
-      });
-      galleryItems.forEach(function (item) {
-        item.hidden = filter !== "all" && item.dataset.galleryCategory !== filter;
-      });
-    });
-  });
-
   var box = document.getElementById("lightbox");
   if (box) {
     var thumbs = Array.prototype.slice.call(document.querySelectorAll(".gallery-grid a"));
@@ -144,19 +129,17 @@
     var current = -1;
     var lastFocus = null;
 
-    function visibleThumbs() { return thumbs.filter(function (item) { return !item.closest("[hidden]"); }); }
     function show(index) {
-      var active = visibleThumbs();
-      if (!active.length) return;
-      current = (index + active.length) % active.length;
-      var link = active[current];
+      if (!thumbs.length) return;
+      current = (index + thumbs.length) % thumbs.length;
+      var link = thumbs[current];
       image.src = link.getAttribute("href");
       image.alt = link.querySelector("img").alt;
       caption.textContent = link.dataset.caption || image.alt;
     }
     function open(link) {
       lastFocus = document.activeElement;
-      current = visibleThumbs().indexOf(link);
+      current = thumbs.indexOf(link);
       show(current);
       if (typeof box.showModal === "function") box.showModal();
       else box.setAttribute("open", "");
