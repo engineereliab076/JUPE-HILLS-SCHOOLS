@@ -297,8 +297,8 @@ a {
   white-space: nowrap;
 }
 
-body:not(.contact-page) .site-nav a[aria-current="page"],
-body:not(.contact-page) .site-nav a:hover {
+.site-nav a[aria-current="page"],
+.site-nav a:hover {
   color: #1e6fba;
   box-shadow: 0 3px 0 #1e6fba;
 }
@@ -680,6 +680,10 @@ figcaption {
   margin-block-start: var(--section-pad);
 }
 
+.home-page .site-footer {
+  margin-block-start: 0;
+}
+
 .site-footer::before {
   /* the uniform stripe as the footer's top edge */
   content: "";
@@ -701,6 +705,7 @@ figcaption {
 
 .site-footer a {
   color: #fff;
+  overflow-wrap: anywhere;
 }
 
 .site-footer .footer-motto {
@@ -716,27 +721,11 @@ figcaption {
   font-size: 0.9rem;
 }
 
-.footer-signup {
-  display: grid;
-  gap: 1rem 2rem;
-  padding-block: 1.5rem;
-  border-block-start: 1px solid rgb(255 255 255 / 0.15);
-}
-
-.footer-signup h2,
-.footer-signup p { margin-block-end: 0.3rem; }
-.footer-signup input { border-color: transparent; }
-.footer-social { grid-column: 1 / -1; font-size: 0.92rem; color: var(--on-navy-mute); }
-
-@media (min-width: 820px) {
-  .footer-signup { grid-template-columns: 1fr 1.6fr; align-items: end; }
-}
-
 .footer-legal p {
   margin: 0;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 900px) {
   .footer-grid {
     grid-template-columns: 2fr 1fr 1fr;
   }
@@ -1020,11 +1009,6 @@ figcaption {
 .cta-banner h2 { color: #fff; margin-block-end: 0.25rem; }
 .cta-banner p { color: #f4dce1; margin: 0; }
 
-.newsletter { background: var(--navy); color: var(--on-navy-soft); padding: 1.5rem; border-radius: 12px; }
-.newsletter h2, .newsletter h3 { color: #fff; }
-.inline-form { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-.inline-form input { flex: 1 1 230px; }
-
 label { display: block; font-weight: 700; margin-block-end: 0.35rem; }
 input, select, textarea {
   inline-size: 100%;
@@ -1041,10 +1025,6 @@ input:focus, select:focus, textarea:focus { border-color: var(--link); outline: 
 .form-grid { display: grid; gap: 1rem; }
 .form-field--full { grid-column: 1 / -1; }
 .form-help { color: var(--caption); font-size: 0.9rem; }
-.form-message { min-block-size: 1.6em; margin-block: 0.75rem 0; font-weight: 700; }
-.form-message.is-error { color: #a1192f; }
-.form-message.is-success { color: #15673b; }
-.was-validated :invalid { border-color: #a1192f; }
 
 .table-wrap { overflow-x: auto; }
 table { inline-size: 100%; border-collapse: collapse; background: #fff; }
@@ -1393,21 +1373,12 @@ details p { margin-block: 0.75rem 0; max-inline-size: 68ch; }
   margin-block-start: 0;
 }
 
-.contact-page .site-nav a:hover,
-.contact-page .site-nav a[aria-current="page"] {
-  color: var(--contact-blue);
-}
-
 .contact-page .breadcrumbs a {
   color: var(--contact-blue);
 }
 
 .contact-page .breadcrumbs li + li::before {
   color: var(--contact-gray);
-}
-
-.contact-page .site-nav a[aria-current="page"] {
-  box-shadow: 0 3px 0 var(--contact-blue);
 }
 
 .contact-page .eyebrow,

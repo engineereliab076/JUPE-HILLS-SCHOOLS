@@ -7,15 +7,6 @@
   var nav = document.getElementById("site-nav");
   var backToTop = document.querySelector(".back-to-top");
 
-  var footer = document.querySelector(".site-footer");
-  var footerLegal = document.querySelector(".footer-legal");
-  if (footer && footerLegal && !footer.hasAttribute("data-no-signup") && !footer.querySelector(".footer-signup")) {
-    var footerSignup = document.createElement("div");
-    footerSignup.className = "shell footer-signup";
-    footerSignup.innerHTML = '<div><h2>School updates</h2><p>Receive term reminders and important updates by email.</p></div><form class="inline-form" data-form="newsletter" novalidate><div><label for="footer-email">Email address</label><input id="footer-email" name="email" type="email" autocomplete="email" required placeholder="parent@example.com"></div><button class="btn btn--solid" type="submit">Subscribe</button><p class="form-message" role="status" aria-live="polite"></p></form><p class="footer-social">Social media: <span>Facebook</span> · <span>Instagram</span> · <span>YouTube</span> <small>(official links pending)</small></p>';
-    footer.insertBefore(footerSignup, footerLegal);
-  }
-
   function setScrolledState() {
     var scrolled = window.scrollY > 24;
     if (header) header.classList.toggle("is-scrolled", scrolled);
@@ -80,45 +71,6 @@
       map.src = map.dataset.src;
     }
   }
-
-  document.querySelectorAll("[data-form]").forEach(function (form) {
-    var message = form.querySelector(".form-message");
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) {
-        form.classList.add("was-validated");
-        if (message) {
-          message.className = "form-message is-error";
-          message.textContent = "Please check the highlighted fields and try again.";
-        }
-        var invalid = form.querySelector(":invalid");
-        if (invalid) invalid.focus();
-        return;
-      }
-
-      var kind = form.dataset.form;
-      if (kind === "contact") {
-        var data = new FormData(form);
-        var subject = data.get("subject") || "Website message";
-        var body = Array.from(data.entries()).map(function (entry) {
-          return entry[0] + ": " + entry[1];
-        }).join("\n");
-        window.location.href = "mailto:nyagwaswafaith@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-        if (message) {
-          message.className = "form-message is-success";
-          message.textContent = "Your email app is opening with the message prepared. Send it to complete your message.";
-        }
-      } else {
-        if (message) {
-          message.className = "form-message is-success";
-          message.textContent = "Thank you. Your email has been recorded on this device for the school newsletter demo.";
-        }
-        try { localStorage.setItem("jupe-newsletter", String(new FormData(form).get("email"))); } catch (error) { /* storage is optional */ }
-        form.reset();
-      }
-      form.classList.remove("was-validated");
-    });
-  });
 
   var box = document.getElementById("lightbox");
   if (box) {
