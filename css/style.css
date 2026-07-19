@@ -979,6 +979,16 @@ figcaption {
 .center { text-align: center; }
 .center .section-title::after { margin-inline: auto; }
 
+.staff-coming-soon {
+  min-block-size: clamp(24rem, 58vh, 38rem);
+  display: grid;
+  place-items: center;
+}
+
+.staff-coming-soon p:last-child {
+  margin-block-end: 0;
+}
+
 .feature-grid,
 .staff-grid,
 .resource-grid,
