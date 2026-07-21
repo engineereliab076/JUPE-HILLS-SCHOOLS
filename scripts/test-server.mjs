@@ -62,7 +62,6 @@ export const publicPages = [
   "/about.html",
   "/admissions.html",
   "/academics.html",
-  "/staff.html",
   "/gallery.html",
   "/parents.html",
   "/contact.html",

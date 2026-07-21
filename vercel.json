@@ -4,6 +4,9 @@
   "outputDirectory": "_site",
   "cleanUrls": false,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/staff.html", "destination": "/about.html", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

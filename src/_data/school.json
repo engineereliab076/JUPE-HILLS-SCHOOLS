@@ -68,7 +68,6 @@
     { "key": "about", "label": "About", "url": "/about.html" },
     { "key": "admissions", "label": "Admissions", "url": "/admissions.html" },
     { "key": "academics", "label": "Academics", "url": "/academics.html" },
-    { "key": "staff", "label": "Staff", "url": "/staff.html" },
     { "key": "gallery", "label": "Gallery", "url": "/gallery.html" },
     { "key": "parents", "label": "Parents", "url": "/parents.html" },
     { "key": "contact", "label": "Contact", "url": "/contact.html" }

@@ -1,17 +1,18 @@
 ---
-layout: layouts/base.njk
 permalink: staff.html
-navKey: staff
-title: Our staff | Jupe Hills Pre & Primary School
-description: Staff information and profiles for Jupe Hills Pre & Primary School will be added after the school confirms them.
-ogTitle: Our staff | Jupe Hills
-ogImage: /assets/img/whole-school-group-960.jpg
-ogImageAlt: Jupe Hills pupils and staff gathered together
+eleventyExcludeFromCollections: true
 ---
-<section class="page-head staff-coming-soon">
-  <div class="shell center">
-    <p class="eyebrow">Our team</p>
-    <h1>Coming soon</h1>
-    <p>Staff information and profiles will be added after they are confirmed by the school.</p>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redirecting to About | {{ school.name }}</title>
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="{{ school.site.url }}/about.html">
+    <meta http-equiv="refresh" content="0; url=/about.html">
+  </head>
+  <body>
+    <p>The staff page has moved. <a href="/about.html">Continue to the About page</a>.</p>
+  </body>
+</html>
