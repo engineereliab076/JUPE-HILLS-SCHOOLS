@@ -20,26 +20,26 @@ Audience: parents in Buswelu / Ilemela, Mwanza — mostly on Android phones, oft
 
 ## 2. Real, confirmed facts — use these exactly, do not invent variants
 
-| Field | Value |
-|---|---|
-| Full name | Jupe Hills Pre & Primary School |
-| Also known as | Jupe Hills Daycare Pre & Primary School |
-| Motto | Learners Today, Leaders Tomorrow |
-| Location | Ibaya, Ilalila, Shibula ward, Buswelu, Ilemela District, Mwanza Region, Tanzania |
-| Postal | S.L.P 735, Ilalila, Mwanza — Tanzania |
-| Founded | 2023 |
-| Head Teacher | Majogoro Sunday |
-| Students | 120 |
-| Staff | 12 |
-| Classes offered | Kindergarten to Class 6 |
-| School hours | Monday–Friday, 7:00 AM–4:00 PM |
-| Phone 1 | 0678 464 686 |
-| Phone 2 | 0750 828 068 |
-| Phone 3 | 0754 768 602 |
-| Email | nyagwaswafaith@gmail.com |
-| Entry rule | An interview or readiness assessment may be required before class placement. |
-| Character | Co-educational. Open to children of all kinds, all religions, and all races. The school believes all people are God's creation, and children are supported in belief according to their own religion. |
-| Uniform | School uniform: white shirt with red checked detailing and red checked skirt. Sports and games uniform: blue tracksuit with maroon shirt. |
+| Field           | Value                                                                                                                                                                                                 |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Full name       | Jupe Hills Pre & Primary School                                                                                                                                                                       |
+| Also known as   | Jupe Hills Daycare Pre & Primary School                                                                                                                                                               |
+| Motto           | Learners Today, Leaders Tomorrow                                                                                                                                                                      |
+| Location        | Ibaya, Ilalila, Shibula ward, Buswelu, Ilemela District, Mwanza Region, Tanzania                                                                                                                      |
+| Postal          | S.L.P 735, Ilalila, Mwanza — Tanzania                                                                                                                                                                 |
+| Founded         | 2023                                                                                                                                                                                                  |
+| Head Teacher    | Majogoro Sunday                                                                                                                                                                                       |
+| Students        | 120                                                                                                                                                                                                   |
+| Staff           | 12                                                                                                                                                                                                    |
+| Classes offered | Kindergarten to Class 6                                                                                                                                                                               |
+| School hours    | Monday–Friday, 7:00 AM–4:00 PM                                                                                                                                                                        |
+| Phone 1         | 0678 464 686                                                                                                                                                                                          |
+| Phone 2         | 0750 828 068                                                                                                                                                                                          |
+| Phone 3         | 0754 768 602                                                                                                                                                                                          |
+| Email           | nyagwaswafaith@gmail.com                                                                                                                                                                              |
+| Entry rule      | An interview or readiness assessment may be required before class placement.                                                                                                                          |
+| Character       | Co-educational. Open to children of all kinds, all religions, and all races. The school believes all people are God's creation, and children are supported in belief according to their own religion. |
+| Uniform         | School uniform: white shirt with red checked detailing and red checked skirt. Sports and games uniform: blue tracksuit with maroon shirt.                                                             |
 
 Phone numbers must be real `tel:` links. All three numbers support calls and WhatsApp. WhatsApp links use the international format without `+` or spaces, for example `https://wa.me/255678464686`.
 
@@ -61,6 +61,7 @@ Do not invent: exam results, rankings, accreditation numbers, awards, or partner
 All originals are in `assets/raw/`. They are **enormous** — nine are 6000×4000 and 5–7 MB each, two are ~22 MB. Shipping them as-is would be a disaster on 3G.
 
 **Required processing step before writing any markup:**
+
 - Generate responsive derivatives at widths 480 / 960 / 1600 px, in **WebP** with JPEG fallback.
 - Target: no single image over ~150 KB at 960px.
 - Write a small Node or Python script (`scripts/build-images.mjs` or `.py`, using `sharp` or `Pillow`) so the client can re-run it when they add photos. Commit the script, commit the derivatives, keep the raws out of the deploy.
@@ -68,32 +69,34 @@ All originals are in `assets/raw/`. They are **enormous** — nine are 6000×400
 
 ### Photo inventory and intended use
 
-| File | Content | Use |
-|---|---|---|
-| `IMG_3771_jpg.jpeg` | Pupils walking in file across the field, teacher leading, stone school building behind. Clean, bright, full of movement. | **Hero.** This is the strongest image. It shows building + pupils + staff + energy in one frame. |
-| `DSC_7305_JPG.jpeg` | Large mixed-age group under trees, teachers standing at the back. | About section — "the whole school" |
-| `DSC_7311_JPG.jpeg` | Older pupils group portrait, tracksuits, playful poses | Gallery, large |
-| `DSC_7431_JPG.jpeg` | Younger class portrait with three teachers | Programmes — Pre-primary |
-| `DSC_7517_JPG.jpeg` | Pupils eating lunch at green tables, "JUPE HILLS SCHOOL" visible on shirts | Gallery — daily life. Uniform branding is legible here, which is good. |
-| `DSC_7737_JPG.jpeg` | Pupils on the "Visit Saanane Island" TANAPA boat, life jackets on, waving | Gallery — hero of the trip block. Life jackets visible = safety signal. Use it. |
-| `DSC_7501_JPG.jpeg` | Child riding a camel with staff holding the rope | Gallery |
-| `DSC_7528_JPG.jpeg` | Pupils and a teacher packed onto a green swing frame | Gallery |
-| `DSC_7532_JPG.jpeg` | Group with staff, an eland grazing behind them | Gallery |
-| `DSC_7545_JPG.jpeg` | Group with a visitor seated among pupils | Gallery, small |
-| `IMG_4018_jpg.jpeg` | Staff and pupils gathered, staff in white branded polos | About |
-| `g2_jpg.jpeg`, `g3_jpg.jpeg`, `g5_jpg.jpeg` | Zoo / enclosure scenes, monkeys, group at the shelter | Gallery, **small only — see warning below** |
-| `IMG-20230825-WA0079_jpg.jpeg` | Teacher with eight pupils by a green enclosure, relaxed and warm | Gallery — good human moment |
-| `IMG-20241201-WA0009_jpg.jpeg` | Award ceremony, pupil in formal uniform receiving a certificate from officials under a tent | **Achievements / ceremony block.** Portrait orientation — plan for it. |
-| `WhatsApp_Image_2026-07-15_at_1_57_24_PM.jpeg` | The school logo, 572×596, **on a black background** | Logo — see below |
-| `WhatsApp_Video_2026-07-15_at_5_10_30_PM.mp4` | 32 MB video, unreviewed | **Do not embed.** Too heavy. Leave a commented-out slot; if it's used later it goes to YouTube and gets embedded lazily. |
+| File                                           | Content                                                                                                                  | Use                                                                                                                      |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `IMG_3771_jpg.jpeg`                            | Pupils walking in file across the field, teacher leading, stone school building behind. Clean, bright, full of movement. | **Hero.** This is the strongest image. It shows building + pupils + staff + energy in one frame.                         |
+| `DSC_7305_JPG.jpeg`                            | Large mixed-age group under trees, teachers standing at the back.                                                        | About section — "the whole school"                                                                                       |
+| `DSC_7311_JPG.jpeg`                            | Older pupils group portrait, tracksuits, playful poses                                                                   | Gallery, large                                                                                                           |
+| `DSC_7431_JPG.jpeg`                            | Younger class portrait with three teachers                                                                               | Programmes — Pre-primary                                                                                                 |
+| `DSC_7517_JPG.jpeg`                            | Pupils eating lunch at green tables, "JUPE HILLS SCHOOL" visible on shirts                                               | Gallery — daily life. Uniform branding is legible here, which is good.                                                   |
+| `DSC_7737_JPG.jpeg`                            | Pupils on the "Visit Saanane Island" TANAPA boat, life jackets on, waving                                                | Gallery — hero of the trip block. Life jackets visible = safety signal. Use it.                                          |
+| `DSC_7501_JPG.jpeg`                            | Child riding a camel with staff holding the rope                                                                         | Gallery                                                                                                                  |
+| `DSC_7528_JPG.jpeg`                            | Pupils and a teacher packed onto a green swing frame                                                                     | Gallery                                                                                                                  |
+| `DSC_7532_JPG.jpeg`                            | Group with staff, an eland grazing behind them                                                                           | Gallery                                                                                                                  |
+| `DSC_7545_JPG.jpeg`                            | Group with a visitor seated among pupils                                                                                 | Gallery, small                                                                                                           |
+| `IMG_4018_jpg.jpeg`                            | Staff and pupils gathered, staff in white branded polos                                                                  | About                                                                                                                    |
+| `g2_jpg.jpeg`, `g3_jpg.jpeg`, `g5_jpg.jpeg`    | Zoo / enclosure scenes, monkeys, group at the shelter                                                                    | Gallery, **small only — see warning below**                                                                              |
+| `IMG-20230825-WA0079_jpg.jpeg`                 | Teacher with eight pupils by a green enclosure, relaxed and warm                                                         | Gallery — good human moment                                                                                              |
+| `IMG-20241201-WA0009_jpg.jpeg`                 | Award ceremony, pupil in formal uniform receiving a certificate from officials under a tent                              | **Achievements / ceremony block.** Portrait orientation — plan for it.                                                   |
+| `WhatsApp_Image_2026-07-15_at_1_57_24_PM.jpeg` | The school logo, 572×596, **on a black background**                                                                      | Logo — see below                                                                                                         |
+| `WhatsApp_Video_2026-07-15_at_5_10_30_PM.mp4`  | 32 MB video, unreviewed                                                                                                  | **Do not embed.** Too heavy. Leave a commented-out slot; if it's used later it goes to YouTube and gets embedded lazily. |
 
 **Colour warning:** `g2`, `g3`, `g5`, `DSC_7501`, `DSC_7528`, `DSC_7532` are heavily over-saturated — neon-green grass, blown highlights, cyan-shifted skin tones. They look filtered and cheapen the page. Two options, do both:
+
 1. In the image script, apply a mild desaturation + highlight recovery to these six specifically (keep a per-file config map, don't blanket-process everything).
 2. Use them **small**, in the gallery grid only. Never full-bleed. The clean photos get the large slots.
 
 **Logo:** the supplied file has a hard black background. Key it out to transparent PNG/SVG in the build script, or place it on dark surfaces only. Do not put a black square on a light header.
 
 **Missing photos** — leave clearly-labelled, gracefully-degrading slots for these, since they're the three things a credibility visitor actually looks for:
+
 - The school building / gate from outside
 - A classroom interior with pupils working
 - A portrait of the Head Teacher
@@ -105,6 +108,7 @@ The slots must look intentional when empty, not broken. Note them in `content/pl
 ## 5. Page structure
 
 ### Home (single scroll)
+
 1. **Header** — logo, name, nav, phone number visible on desktop. Sticky, compact on scroll.
 2. **Hero** — school name, motto, one line of orientation ("A day-care, pre-primary and primary school in Ibaya, Buswelu — Mwanza"), call + WhatsApp buttons, hero photo.
 3. **At a glance** — founded, pupils, staff, classes offered, hours. Four or five facts, no more.
@@ -116,10 +120,13 @@ The slots must look intentional when empty, not broken. Note them in `content/pl
 9. **Footer** — contacts repeated, motto, postal address, copyright.
 
 ### /gallery
-All usable photos, grouped: *Around school* · *Saanane Island trip* · *Ceremonies*. Lightbox on click — keyboard accessible, Escape closes, focus trapped and restored.
+
+All usable photos, grouped: _Around school_ · _Saanane Island trip_ · _Ceremonies_. Lightbox on click — keyboard accessible, Escape closes, focus trapped and restored.
 
 ### /admissions
+
 The joining instructions, cleanly typed and organised:
+
 - School profile (real text, tidied)
 - Who we admit (2–5 daycare; 6–7 Standard I; interview for I–IV)
 - How to apply — placeholder 3-step process, marked as such
@@ -133,11 +140,13 @@ The joining instructions, cleanly typed and organised:
 You are the design lead. Make deliberate choices, and read `frontend-design` guidance before you start. Some constraints and some freedom:
 
 **Fixed — derived from the school's real identity:**
+
 - The palette comes from the **logo and the uniform**, which the school already owns: maroon/crimson, the deep navy ring, the sky blue of the tracksuits, the gold/amber sunburst, and the teal accent. Build a 5–6 token palette from these. The sky-blue-and-maroon pairing is genuinely distinctive and already worn by every child in every photo — lean on it. Do not import an unrelated palette.
 - Photos are the argument. Type and chrome should get out of their way.
 - The motto is the school's own line. Give it a real typographic moment somewhere — once, not on every section.
 
 **Free — your call, but justify it in a short `DESIGN.md`:**
+
 - Typeface pairing. Pick something with warmth and structure. Avoid the default institutional-serif-plus-Inter combination. Whatever you pick must render Swahili place names and have a real bold.
 - Layout system and the one signature element the page is remembered by.
 

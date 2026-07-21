@@ -1,0 +1,101 @@
+---
+layout: layouts/base.njk
+permalink: admissions.html
+navKey: admissions
+title: Admissions | Jupe Hills Pre & Primary School
+description: Approved admissions process, required documents, placement interview and fee guidance for daycare, pre-primary and Primary Class 1 to Class 6 at Jupe Hills.
+ogTitle: Admissions at Jupe Hills
+ogImage: /assets/img/field-crossing-960.jpg
+ogImageAlt: Jupe Hills pupils walking across the school field
+---
+<header class="page-head">
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Admissions</li></ol></nav>
+    <p class="eyebrow">Join Jupe Hills</p>
+    <h1>A clear path into school</h1>
+    <p class="intro">We welcome children of all backgrounds, religions and communities. Review the programmes below, then contact us to arrange the next step.</p>
+    <p class="cluster"><a class="btn btn--solid" href="{{ school.phones[school.primaryAdmissions.phoneIndex].whatsapp }}">Start an admission enquiry</a></p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="shell">
+    <p class="section-kicker">Who we admit</p>
+    <h2 class="section-title">Programmes offered</h2>
+    <div class="cards">
+      {% for programme in school.programmes %}
+        <article class="card"><h3>{{ programme.name }}</h3>{% if programme.classes %}<p class="ages">{{ programme.classes }}</p>{% endif %}<p>{{ programme.description }}</p></article>
+      {% endfor %}
+    </div>
+    <aside class="callout"><h3>Placement guidance</h3><p>An interview or readiness assessment may be required before class placement.</p></aside>
+  </div>
+</section>
+
+<section class="section section--wash">
+  <div class="shell">
+    <p class="section-kicker">How to apply</p>
+    <h2 class="section-title">Admission process</h2>
+    <ol class="steps">
+      <li><h3>Contact the school</h3><p>Call or WhatsApp the school with the child’s age and current class.</p></li>
+      <li><h3>Visit with the child</h3><p>Meet the school team, see the campus and complete any required interview or readiness check.</p></li>
+      <li><h3>Submit documents and confirm a place</h3><p>Bring the requested records, receive fee guidance and complete registration.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell split">
+    <div>
+      <p class="section-kicker">Prepare for your visit</p>
+      <h2 class="section-title">Documents to bring</h2>
+      <ul class="checklist">
+        <li>Copy of the child’s birth certificate</li>
+        <li>Two recent passport-size photographs</li>
+        <li>Previous school report or transfer information, where applicable</li>
+        <li>Parent or guardian contact details</li>
+        <li>Any relevant health or support information</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h2>Current joining guidance</h2>
+      <p>Review the joining instructions for placement guidance and approved requirements.</p>
+      <a class="btn btn--solid" href="/assets/docs/jupe-hills-joining-instructions.pdf">Download joining instructions (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--wash">
+  <div class="shell">
+    <p class="section-kicker">Planning</p>
+    <h2 class="section-title">School fees guidance</h2>
+    <div class="table-wrap" tabindex="0" role="group" aria-label="School fees guidance">
+      <table>
+        <caption>Contact the school for current amounts and payment dates</caption>
+        <thead><tr><th scope="col">Level</th><th scope="col">Tuition</th><th scope="col">Meals</th><th scope="col">Transport</th><th scope="col">Notes</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Daycare</th><td>Contact school</td><td>Contact school</td><td>Optional</td><td>Placement confirmed on visit</td></tr>
+          <tr><th scope="row">Pre-primary</th><td>Contact school</td><td>Contact school</td><td>Optional</td><td>Placement confirmed on visit</td></tr>
+          <tr><th scope="row">Primary: Class 1 to Class 6</th><td>Contact school</td><td>Contact school</td><td>Optional</td><td>Placement guidance available from the school</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="form-help">For current fees and payment dates, call any school number or start a WhatsApp enquiry.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <p class="section-kicker">Common questions</p>
+    <h2 class="section-title">Admissions FAQ</h2>
+    <details><summary>Does Jupe Hills admit children from every religion?</summary><p>Yes. Children from all religious and cultural backgrounds are welcome and treated with respect.</p></details>
+    <details><summary>Is an interview always required?</summary><p>An interview or readiness assessment may be required before class placement.</p></details>
+    <details><summary>Can we visit before applying?</summary><p>Yes. Call ahead and the school can arrange a suitable time for your family to visit.</p></details>
+    <details><summary>Are fee amounts listed online?</summary><p>Contact the school for current approved amounts, payment dates and instructions.</p></details>
+  </div>
+</section>
+
+{% set ctaTitle = "Start your admission enquiry" %}
+{% set ctaText = "WhatsApp the school to ask about a place, class placement or a visit." %}
+{% set ctaSecondaryUrl = "/contact.html" %}
+{% set ctaSecondaryLabel = "Contact us" %}
+{% include "partials/admission-cta.njk" %}

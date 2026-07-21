@@ -1,0 +1,92 @@
+---
+layout: layouts/base.njk
+permalink: academics.html
+navKey: academics
+title: Academics | Jupe Hills Pre & Primary School
+description: Explore daycare, pre-primary and Primary Class 1 to Class 6 learning and the approved 2026 academic calendar at Jupe Hills.
+ogTitle: Learning at Jupe Hills
+ogImage: /assets/img/young-class-teachers-960.jpg
+ogImageAlt: Young Jupe Hills pupils standing together with their teachers
+---
+<header class="page-head">
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Academics</li></ol></nav>
+    <p class="eyebrow">Learning at Jupe Hills</p>
+    <h1>Strong foundations, one step at a time</h1>
+    <p class="intro">Our programmes move from attentive care and guided early learning to reading, number confidence, subject knowledge and responsible independence.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="shell">
+    <p class="section-kicker">Programmes</p>
+    <h2 class="section-title">Learning for every stage</h2>
+    <div class="cards">
+      {% for programme in school.programmes %}
+        <article class="card"><h3>{{ programme.name }}</h3>{% if programme.classes %}<p class="ages">{{ programme.classes }}</p>{% endif %}<p>{{ programme.description }}</p></article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--wash">
+  <div class="shell split">
+    <div>
+      <p class="section-kicker">Early learning</p>
+      <h2 class="section-title">Strong foundations for learning</h2>
+      <p>Children in the early years learn through purposeful play, conversation, repetition and guided classroom activities.</p>
+      <ul class="checklist">
+        <li>Language through talk, songs and stories</li>
+        <li>Movement and fine-motor activities</li>
+        <li>Sharing, taking turns and following routines</li>
+        <li>Early shapes, colours, sorting and counting</li>
+        <li>Confidence in a classroom group</li>
+      </ul>
+    </div>
+    <figure>
+      <picture>
+        <source type="image/webp" srcset="/assets/img/young-class-teachers-480.webp 480w, /assets/img/young-class-teachers-960.webp 960w" sizes="(min-width: 820px) 520px, 92vw">
+        <img src="/assets/img/young-class-teachers-960.jpg" srcset="/assets/img/young-class-teachers-480.jpg 480w, /assets/img/young-class-teachers-960.jpg 960w" sizes="(min-width: 820px) 520px, 92vw" width="960" height="640" loading="lazy" alt="Young Jupe Hills students standing together with three teachers">
+      </picture>
+      <figcaption>Young learners and their teachers.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell split">
+    <div>
+      <p class="section-kicker">School year</p>
+      <h2 class="section-title">Academic calendar</h2>
+      <div class="table-wrap" tabindex="0" role="group" aria-label="2026 academic calendar">
+        <table class="calendar-table">
+          <caption>2026 academic calendar</caption>
+          <thead><tr><th scope="col">Period</th><th scope="col">Dates</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Term 1</th><td>January–April</td></tr>
+            <tr><th scope="row">Term 2</th><td>May–August</td></tr>
+            <tr><th scope="row">Term 3</th><td>September–December</td></tr>
+            <tr><th scope="row">End of year break</th><td>December</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <p class="section-kicker">Resources</p>
+      <h2 class="section-title">Tools that support learning</h2>
+      <ul class="checklist">
+        <li>Age-appropriate story and reading books</li>
+        <li>Writing, drawing and number materials</li>
+        <li>Teacher-made visual aids and practice activities</li>
+        <li>Outdoor space for movement and observation</li>
+        <li>School trips that connect lessons to the wider world</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% set ctaTitle = "Ask about the right class for your child" %}
+{% set ctaText = "An interview or readiness assessment may be required before class placement." %}
+{% set ctaSecondaryUrl = "/admissions.html" %}
+{% set ctaSecondaryLabel = "View admissions" %}
+{% include "partials/admission-cta.njk" %}

@@ -1,0 +1,38 @@
+<footer class="site-footer on-dark">
+  <div class="shell footer-grid">
+    <div>
+      <img src="/assets/img/logo-header.png" alt="" width="86" height="60" loading="lazy">
+      <p class="footer-motto">{{ school.motto }}</p>
+      <p>
+        {{ school.name }}<br>
+        {{ school.address.line1 }}<br>
+        {{ school.address.line2 }}<br>
+        {{ school.address.line3 }}
+      </p>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul class="footer-contact-list">
+        {% for phone in school.phones %}
+          <li>
+            <a href="tel:{{ phone.international }}">{{ phone.display | nbsp }}</a>
+            <span aria-hidden="true">·</span>
+            <a href="{{ phone.whatsapp }}">WhatsApp</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <p class="break-anywhere">{{ school.email }}</p>
+    </div>
+    <div>
+      <h2>Explore</h2>
+      <ul class="footer-links">
+        {% for item in school.navigation %}
+          {% if item.key != "home" %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="shell footer-legal">
+    <p>© {{ year }} {{ school.name }}</p>
+  </div>
+</footer>

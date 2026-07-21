@@ -1,0 +1,14 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "attr-quotes": "error",
+    "doctype-style": "error",
+    "heading-level": "error",
+    "no-inline-style": "error",
+    "prefer-native-element": "off",
+    "require-sri": "off",
+    "tel-non-breaking": "off",
+    "wcag/h30": "error",
+    "wcag/h32": "error"
+  }
+}

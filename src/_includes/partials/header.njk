@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="shell header-bar">
+    <a class="brand" href="/">
+      <img src="/assets/img/logo-header.png" alt="" width="171" height="120">
+      <span class="brand-name">Jupe Hills <span>Pre &amp; Primary School</span></span>
+    </a>
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      aria-label="Open main menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      {% for item in school.navigation %}
+        <a href="{{ item.url }}"{% if navKey == item.key %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+  <div class="menu-backdrop" data-menu-backdrop aria-hidden="true"></div>
+</header>

@@ -1,0 +1,19 @@
+<div class="location-pending">
+  <svg class="location-pending__icon" width="32" height="32" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" fill="none" stroke="currentColor" stroke-width="1.8"></path>
+    <circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"></circle>
+  </svg>
+  <div>
+    <h3>School location</h3>
+    <address>
+      {{ school.address.line1 }}<br>
+      {{ school.address.line2 }}<br>
+      {{ school.address.line3 }}
+    </address>
+    <p>Exact Google Maps location will be added soon.</p>
+    <p class="cluster">
+      <a class="btn btn--solid" href="{{ school.phones[school.primaryAdmissions.phoneIndex].whatsapp }}">Start an admission enquiry</a>
+      <a class="btn btn--outline" href="tel:{{ school.phones[school.primaryAdmissions.phoneIndex].international }}">Call the school</a>
+    </p>
+  </div>
+</div>

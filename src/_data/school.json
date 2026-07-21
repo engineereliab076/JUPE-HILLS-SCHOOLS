@@ -1,0 +1,76 @@
+{
+  "name": "Jupe Hills Pre & Primary School",
+  "shortName": "Jupe Hills",
+  "motto": "Learners today, leaders tomorrow",
+  "founded": 2023,
+  "students": 120,
+  "staff": 12,
+  "headTeacher": "Majogoro Sunday",
+  "programmes": [
+    {
+      "name": "Daycare",
+      "description": "Attentive care and age-appropriate routines for young children."
+    },
+    {
+      "name": "Pre-primary",
+      "description": "Early literacy, number sense, listening skills and confidence through guided learning."
+    },
+    {
+      "name": "Primary",
+      "classes": "Class 1 to Class 6",
+      "description": "Structured lessons that build core academic skills, confidence and positive study habits."
+    }
+  ],
+  "hours": {
+    "days": "Monday–Friday",
+    "time": "7:00 AM–4:00 PM",
+    "schema": "Mo-Fr 07:00-16:00"
+  },
+  "address": {
+    "line1": "Ibaya, Ilalila, Shibula Ward",
+    "line2": "Buswelu, Ilemela District",
+    "line3": "Mwanza, Tanzania",
+    "countryCode": "TZ"
+  },
+  "email": "nyagwaswafaith@gmail.com",
+  "phones": [
+    {
+      "display": "0678 464 686",
+      "international": "+255678464686",
+      "whatsapp": "https://wa.me/255678464686"
+    },
+    {
+      "display": "0750 828 068",
+      "international": "+255750828068",
+      "whatsapp": "https://wa.me/255750828068"
+    },
+    {
+      "display": "0754 768 602",
+      "international": "+255754768602",
+      "whatsapp": "https://wa.me/255754768602"
+    }
+  ],
+  "primaryAdmissions": {
+    "phoneIndex": 0,
+    "status": "awaiting final confirmation",
+    "note": "Primary admissions number awaiting final confirmation."
+  },
+  "site": {
+    "url": "https://jupe-hills-schools.vercel.app",
+    "futureCustomDomain": "",
+    "googleMapsUrl": "",
+    "latitude": null,
+    "longitude": null,
+    "todo": "Replace the Vercel base URL when the custom domain is purchased; then update canonical, Open Graph and sitemap URLs. Add the exact Google Maps link and verified coordinates when supplied."
+  },
+  "navigation": [
+    { "key": "home", "label": "Home", "url": "/" },
+    { "key": "about", "label": "About", "url": "/about.html" },
+    { "key": "admissions", "label": "Admissions", "url": "/admissions.html" },
+    { "key": "academics", "label": "Academics", "url": "/academics.html" },
+    { "key": "staff", "label": "Staff", "url": "/staff.html" },
+    { "key": "gallery", "label": "Gallery", "url": "/gallery.html" },
+    { "key": "parents", "label": "Parents", "url": "/parents.html" },
+    { "key": "contact", "label": "Contact", "url": "/contact.html" }
+  ]
+}

@@ -9,27 +9,27 @@ the actual photos in `assets/raw/` and the scanned joining-instructions form.
 
 The brief's file-to-content table is scrambled. Actual contents, verified by eye:
 
-| File | Actual content | Planned use |
-|---|---|---|
-| `DSC_7311.JPG.jpeg` | Pupils walking/running across the field, teacher among them, stone school building behind. Bright, full of movement. | **Hero.** This is the shot the brief attributed to `IMG_3771`. |
-| `IMG_3771.jpg.jpeg` | The Saanane Island TANAPA boat — life jackets, waving. | Trip block lead. Life jackets = safety signal. |
-| `DSC_7305.JPG.jpeg` | Mixed-age group under trees, staff around them. | About — "the whole school" (matches brief). |
-| `g2.jpg.jpeg` | Whole-school group portrait under trees. **Not a zoo scene. Well exposed.** | About / gallery, large. |
-| `g3.jpg.jpeg` | Older pupils group portrait, tracksuits, playful poses. **Well exposed.** | Gallery, large — this is the shot the brief attributed to `DSC_7311`. |
-| `g5.jpg.jpeg` | Younger class with three teachers. **Well exposed.** | Programmes — Pre-primary card. |
-| `IMG_4018.jpg.jpeg` | Lunch at green tables, "JUPE HILLS SCHOOL" legible on shirts. | Gallery — daily life. Uniform branding visible. |
-| `DSC_7737.JPG.jpeg` | Child riding the camel, staff holding the rope. | Gallery, small (over-saturated). |
-| `DSC_7501.JPG.jpeg` | Monkeys in an enclosure, pupils watching. | Gallery, small (over-saturated). |
-| `DSC_7431.JPG.jpeg` | Group at a zoo shelter/enclosure. | Gallery, small (over-saturated). |
-| `DSC_7517.JPG.jpeg` | Group with staff, an eland grazing behind, stone building. | Gallery, medium (mildly hot colour). |
-| `DSC_7528.JPG.jpeg` | Group with a visitor seated among pupils. | Gallery, small–medium. |
-| `DSC_7532.JPG.jpeg` | Pupils and a teacher on the green swing frame. | Gallery, small (over-saturated). |
-| `DSC_7545.JPG.jpeg` | Large group under a shelter, seen from behind. | Gallery, small. |
-| `IMG-20230825-WA0079.jpg.jpeg` | Teacher with eight pupils by a green enclosure. Warm, relaxed. | Gallery — good human moment (matches brief). |
-| `IMG-20241201-WA0009.jpg.jpeg` | Award ceremony, pupil in formal uniform (white shirt, maroon check skirt) receiving a certificate. **Portrait orientation.** | Achievements block (matches brief). |
-| `WhatsApp Image … 1.57.24 PM.jpeg` | School logo, 572×596, hard black background. | Logo — key black to transparent in the build script. |
-| `WhatsApp Video … 5.10.30 PM.mp4` | 32 MB video, unreviewed. | Not embedded. Commented-out slot only. |
-| `CamScanner 07-15-2026 13.53.pdf` | **Not in the brief.** The school's real Joining Instructions Form: school profile + admissions rules. | Source text for `/admissions`. Confirms name, motto, S.L.P 735, both phones, email, intake ages, interview rule. |
+| File                               | Actual content                                                                                                               | Planned use                                                                                                      |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `DSC_7311.JPG.jpeg`                | Pupils walking/running across the field, teacher among them, stone school building behind. Bright, full of movement.         | **Hero.** This is the shot the brief attributed to `IMG_3771`.                                                   |
+| `IMG_3771.jpg.jpeg`                | The Saanane Island TANAPA boat — life jackets, waving.                                                                       | Trip block lead. Life jackets = safety signal.                                                                   |
+| `DSC_7305.JPG.jpeg`                | Mixed-age group under trees, staff around them.                                                                              | About — "the whole school" (matches brief).                                                                      |
+| `g2.jpg.jpeg`                      | Whole-school group portrait under trees. **Not a zoo scene. Well exposed.**                                                  | About / gallery, large.                                                                                          |
+| `g3.jpg.jpeg`                      | Older pupils group portrait, tracksuits, playful poses. **Well exposed.**                                                    | Gallery, large — this is the shot the brief attributed to `DSC_7311`.                                            |
+| `g5.jpg.jpeg`                      | Younger class with three teachers. **Well exposed.**                                                                         | Programmes — Pre-primary card.                                                                                   |
+| `IMG_4018.jpg.jpeg`                | Lunch at green tables, "JUPE HILLS SCHOOL" legible on shirts.                                                                | Gallery — daily life. Uniform branding visible.                                                                  |
+| `DSC_7737.JPG.jpeg`                | Child riding the camel, staff holding the rope.                                                                              | Gallery, small (over-saturated).                                                                                 |
+| `DSC_7501.JPG.jpeg`                | Monkeys in an enclosure, pupils watching.                                                                                    | Gallery, small (over-saturated).                                                                                 |
+| `DSC_7431.JPG.jpeg`                | Group at a zoo shelter/enclosure.                                                                                            | Gallery, small (over-saturated).                                                                                 |
+| `DSC_7517.JPG.jpeg`                | Group with staff, an eland grazing behind, stone building.                                                                   | Gallery, medium (mildly hot colour).                                                                             |
+| `DSC_7528.JPG.jpeg`                | Group with a visitor seated among pupils.                                                                                    | Gallery, small–medium.                                                                                           |
+| `DSC_7532.JPG.jpeg`                | Pupils and a teacher on the green swing frame.                                                                               | Gallery, small (over-saturated).                                                                                 |
+| `DSC_7545.JPG.jpeg`                | Large group under a shelter, seen from behind.                                                                               | Gallery, small.                                                                                                  |
+| `IMG-20230825-WA0079.jpg.jpeg`     | Teacher with eight pupils by a green enclosure. Warm, relaxed.                                                               | Gallery — good human moment (matches brief).                                                                     |
+| `IMG-20241201-WA0009.jpg.jpeg`     | Award ceremony, pupil in formal uniform (white shirt, maroon check skirt) receiving a certificate. **Portrait orientation.** | Achievements block (matches brief).                                                                              |
+| `WhatsApp Image … 1.57.24 PM.jpeg` | School logo, 572×596, hard black background.                                                                                 | Logo — key black to transparent in the build script.                                                             |
+| `WhatsApp Video … 5.10.30 PM.mp4`  | 32 MB video, unreviewed.                                                                                                     | Not embedded. Commented-out slot only.                                                                           |
+| `CamScanner 07-15-2026 13.53.pdf`  | **Not in the brief.** The school's real Joining Instructions Form: school profile + admissions rules.                        | Source text for `/admissions`. Confirms name, motto, S.L.P 735, both phones, email, intake ages, interview rule. |
 
 **Saturation-fix list (corrected).** The brief named `g2/g3/g5` as over-saturated; they are
 fine. The files that actually need mild desaturation + highlight recovery in the image
@@ -49,14 +49,14 @@ alongside the verified Head Teacher name, Majogoro Sunday.
 
 Every colour below is on the child in the photos or in the logo. Nothing imported.
 
-| Token | Hex | Source | Role |
-|---|---|---|---|
-| `--maroon` | `#7C2130` | Uniform shirts, logo lettering (deepened for text use) | Primary brand colour: headings accents, buttons, footer |
-| `--navy` | `#1F2C47` | Logo ring | Body text ("ink"), header, motto band |
-| `--sky` | `#5BABD9` | Tracksuits | Accents, the signature stripe, decorative surfaces — never body text |
-| `--sky-wash` | `#EAF4FA` | Tracksuits, tinted to near-white | Alternating section backgrounds |
-| `--gold` | `#F2A93B` | Logo sunburst | Small accents and the motto moment — decorative + large text on navy only |
-| `--paper` | `#FBFAF7` | — | Page background (warm off-white, not cream) |
+| Token        | Hex       | Source                                                 | Role                                                                      |
+| ------------ | --------- | ------------------------------------------------------ | ------------------------------------------------------------------------- |
+| `--maroon`   | `#7C2130` | Uniform shirts, logo lettering (deepened for text use) | Primary brand colour: headings accents, buttons, footer                   |
+| `--navy`     | `#1F2C47` | Logo ring                                              | Body text ("ink"), header, motto band                                     |
+| `--sky`      | `#5BABD9` | Tracksuits                                             | Accents, the signature stripe, decorative surfaces — never body text      |
+| `--sky-wash` | `#EAF4FA` | Tracksuits, tinted to near-white                       | Alternating section backgrounds                                           |
+| `--gold`     | `#F2A93B` | Logo sunburst                                          | Small accents and the motto moment — decorative + large text on navy only |
+| `--paper`    | `#FBFAF7` | —                                                      | Page background (warm off-white, not cream)                               |
 
 Derived shade: `--link` `#1D6FA5` (sky darkened until it passes 4.5:1 on paper, for
 text links). White `#FFFFFF` for text on maroon/navy.
@@ -135,7 +135,7 @@ Every child in every photo wears the sky-blue tracksuit with white side stripes.
 The site borrows it literally: a **triple stripe** — sky / white / sky — used as a
 horizontal motif. It appears as the underline beneath each section heading, as the
 top edge of the footer, and as the scroll-progress accent under the sticky header.
-It is cheap (pure CSS, zero images), unmistakably *theirs*, and it quietly repeats
+It is cheap (pure CSS, zero images), unmistakably _theirs_, and it quietly repeats
 the "this is a real school with a real uniform" argument on every screen.
 
 ---

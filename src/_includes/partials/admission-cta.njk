@@ -1,0 +1,14 @@
+<section class="section" aria-label="Admissions call to action">
+  <div class="shell">
+    <div class="cta-banner">
+      <div>
+        <h2>{{ ctaTitle or "Ready to visit Jupe Hills?" }}</h2>
+        <p>{{ ctaText or "Ask about a place or arrange a visit to the school." }}</p>
+      </div>
+      <div class="cluster">
+        <a class="btn btn--ghost" href="{{ school.phones[school.primaryAdmissions.phoneIndex].whatsapp }}">Start an admission enquiry</a>
+        {% if ctaSecondaryUrl and ctaSecondaryLabel %}<a class="btn btn--ghost" href="{{ ctaSecondaryUrl }}">{{ ctaSecondaryLabel }}</a>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>

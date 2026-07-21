@@ -1,0 +1,75 @@
+---
+layout: layouts/base.njk
+permalink: contact.html
+navKey: contact
+bodyClass: contact-page
+title: Contact us | Jupe Hills Pre & Primary School
+description: Call or WhatsApp Jupe Hills Pre & Primary School in Ibaya, Ilalila, Shibula Ward, Buswelu, Ilemela District, Mwanza.
+ogTitle: Contact Jupe Hills Pre & Primary School
+ogImage: /assets/img/field-crossing-960.jpg
+ogImageAlt: Jupe Hills pupils walking across the school field
+---
+<header class="page-head contact-hero">
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Contact us</li></ol></nav>
+    <p class="eyebrow contact-label">Get in touch</p>
+    <h1>Contact us</h1>
+    <p class="intro contact-subtitle">All three school numbers support phone calls and WhatsApp.</p>
+  </div>
+</header>
+
+<section class="section contact-section" aria-labelledby="contact-options-title">
+  <div class="shell">
+    <div class="contact-panel">
+      <div class="contact-panel__heading">
+        <span class="contact-panel__mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24"><path d="M7 3H5a2 2 0 0 0-2 2c0 8.8 7.2 16 16 16a2 2 0 0 0 2-2v-2l-4-1-1 2c-4.3-1-7-3.7-8-8l2-1-1-4-2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+        </span>
+        <div>
+          <p class="section-kicker contact-label">Here when you need us</p>
+          <h2 class="contact-heading" id="contact-options-title">Call or message us</h2>
+          <p class="contact-subtitle">Choose any number below. No number has been assigned a separate role.</p>
+        </div>
+      </div>
+
+      <div class="contact-methods-grid contact-methods-grid--three">
+        {% for phone in school.phones %}
+          <article class="contact-method contact-card">
+            <span class="contact-method__icon contact-card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path d="M7 3H5a2 2 0 0 0-2 2c0 8.8 7.2 16 16 16a2 2 0 0 0 2-2v-2l-4-1-1 2c-4.3-1-7-3.7-8-8l2-1-1-4-2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+            </span>
+            <h3 class="contact-card-label">Phone and WhatsApp</h3>
+            <p class="contact-method__detail"><a href="tel:{{ phone.international }}">{{ phone.display | nbsp }}</a></p>
+            <div class="contact-method__actions">
+              <a class="contact-method__action" href="tel:{{ phone.international }}">Call this number</a>
+              <a class="contact-method__action" href="{{ phone.whatsapp }}">Open WhatsApp</a>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+
+      <div class="contact-address-panel">
+        <div class="contact-address">
+          <span class="contact-address__icon contact-card-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" fill="none" stroke="currentColor" stroke-width="1.8"></path><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"></circle></svg>
+          </span>
+          <div><h3 class="address-label">Physical address</h3><address class="address-value"><strong>{{ school.address.line1 }}</strong><br>{{ school.address.line2 }}<br>{{ school.address.line3 }}</address></div>
+        </div>
+        <div class="contact-address">
+          <span class="contact-address__icon contact-card-icon" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24"><path d="M4 5h16v14H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+          </span>
+          <div><h3 class="address-label">Email and hours</h3><p class="address-value break-anywhere">{{ school.email }}</p><p class="address-value">{{ school.hours.days }}<br>{{ school.hours.time }}</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section visit-section" aria-labelledby="find-school-title">
+  <div class="shell">
+    <p class="section-kicker">Plan a visit</p>
+    <h2 class="section-title" id="find-school-title">Find the school</h2>
+    {% include "partials/location.njk" %}
+  </div>
+</section>

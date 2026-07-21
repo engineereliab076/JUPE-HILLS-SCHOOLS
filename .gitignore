@@ -19,6 +19,7 @@ venv/
 
 # JavaScript dependencies
 node_modules/
+.npm-cache/
 
 # Environment variables and local secrets
 .env
@@ -28,6 +29,8 @@ node_modules/
 # Generated output, caches and temporary files
 dist/
 build/
+_site/
+reports/
 tmp/
 .cache/
 *.log

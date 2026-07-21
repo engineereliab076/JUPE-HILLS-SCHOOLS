@@ -1,0 +1,73 @@
+---
+layout: layouts/base.njk
+permalink: gallery.html
+navKey: gallery
+title: Gallery | Jupe Hills Pre & Primary School
+description: See photographs of everyday school life, learning, outings and celebrations at Jupe Hills Pre & Primary School in Mwanza.
+ogTitle: Jupe Hills photo gallery
+ogImage: /assets/img/whole-school-group-960.jpg
+ogImageAlt: Jupe Hills pupils and staff gathered together
+---
+<header class="page-head">
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Gallery</li></ol></nav>
+    <p class="eyebrow">Life at Jupe Hills</p>
+    <h1>School days, trips and proud moments</h1>
+    <p class="intro">Explore school days, trips, celebrations and everyday moments from life at Jupe Hills. Select any photograph to open a larger view.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="shell">
+    {% set photos = [
+      {slug: "whole-school-trees", full: "whole-school-trees-1600.webp", caption: "The whole school gathered beneath the trees.", alt: "The Jupe Hills school community gathered beneath trees", large: true},
+      {slug: "young-class-teachers", full: "young-class-teachers-1600.webp", caption: "Young learners with their teachers.", alt: "Young Jupe Hills pupils standing with three teachers"},
+      {slug: "lunch-tables", full: "lunch-tables-1600.webp", caption: "Sharing lunch during the school day.", alt: "Pupils eating lunch together at green school tables"},
+      {slug: "field-crossing", full: "field-crossing-1600.webp", caption: "Moving together across the school field.", alt: "Pupils walking across the field with a teacher"},
+      {slug: "swing", full: "swing-1600.webp", caption: "A supervised turn on the swing during an outing.", alt: "Pupils and a teacher playing together on a green swing"},
+      {slug: "saanane-boat", full: "saanane-boat-1600.webp", caption: "Pupils wearing life jackets on the Saanane Island boat.", alt: "Pupils in life jackets waving from the Saanane Island boat", large: true},
+      {slug: "camel-ride", full: "camel-ride-1600.webp", caption: "A supervised camel ride on a school outing.", alt: "A child riding a camel while adults supervise"},
+      {slug: "monkeys", full: "monkeys-1600.webp", caption: "Observing monkeys during a learning visit.", alt: "Pupils watching monkeys in an enclosure"},
+      {slug: "enclosure-group", full: "enclosure-group-960.webp", caption: "Pupils and their teacher together on an outing.", alt: "A teacher with eight pupils on a school outing"},
+      {slug: "eland", full: "eland-1600.webp", caption: "The school group near an eland habitat.", alt: "Pupils and staff standing while an eland grazes nearby"},
+      {slug: "zoo-shelter", full: "zoo-shelter-1600.webp", caption: "Gathered at a shelter during a school trip.", alt: "Pupils and staff gathered at a shelter on a school trip"},
+      {slug: "older-pupils", full: "older-pupils-1600.webp", caption: "Older pupils together during the school day.", alt: "Older pupils posing together beneath the trees"},
+      {slug: "whole-school-group", full: "whole-school-group-1600.webp", caption: "Pupils and staff together.", alt: "A large group of Jupe Hills pupils and staff"},
+      {slug: "visitor", full: "visitor-1600.webp", caption: "A visitor seated with pupils and staff.", alt: "A visitor seated among Jupe Hills pupils and staff"},
+      {slug: "group-at-shelter", full: "group-at-shelter-1600.webp", caption: "The group together during an outing.", alt: "A large group of pupils gathered under a shelter"}
+    ] %}
+    <div class="gallery-grid">
+      {% for photo in photos %}
+        <div{% if photo.large %} class="is-large"{% endif %}>
+          <a href="/assets/img/{{ photo.full }}" data-caption="{{ photo.caption }}">
+            <picture>
+              <source type="image/webp" srcset="/assets/img/{{ photo.slug }}-480.webp 480w, /assets/img/{{ photo.slug }}-960.webp 960w" sizes="(min-width: 1080px) 25vw, (min-width: 720px) 50vw, 100vw">
+              <img src="/assets/img/{{ photo.slug }}-480.jpg" srcset="/assets/img/{{ photo.slug }}-480.jpg 480w, /assets/img/{{ photo.slug }}-960.jpg 960w" sizes="(min-width: 1080px) 25vw, (min-width: 720px) 50vw, 100vw" width="960" height="640" loading="lazy" alt="{{ photo.alt }}">
+            </picture>
+          </a>
+        </div>
+      {% endfor %}
+      <div class="is-tall">
+        <a href="/assets/img/award-ceremony-480.webp" data-caption="A pupil receives a certificate at a ceremony.">
+          <picture>
+            <source type="image/webp" srcset="/assets/img/award-ceremony-480.webp">
+            <img src="/assets/img/award-ceremony-480.jpg" width="480" height="720" loading="lazy" alt="A pupil in formal uniform receiving a certificate from officials">
+          </picture>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+  <button class="lb-close" type="button" aria-label="Close image">
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2"></path></svg>
+  </button>
+  <button class="lb-prev" type="button" aria-label="Previous image">
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2"></path></svg>
+  </button>
+  <figure><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="1100" height="734" alt=""><figcaption></figcaption></figure>
+  <button class="lb-next" type="button" aria-label="Next image">
+    <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"></path></svg>
+  </button>
+</dialog>

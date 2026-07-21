@@ -1,0 +1,7 @@
+_site/
+node_modules/
+assets/raw/
+assets/img/
+assets/docs/
+fonts/
+package-lock.json

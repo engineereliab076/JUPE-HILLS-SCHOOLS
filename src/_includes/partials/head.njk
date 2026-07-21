@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1f2c47">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ school.site.url }}{{ page.url }}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ school.name }}">
+<meta property="og:url" content="{{ school.site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ ogTitle or title }}">
+<meta property="og:description" content="{{ ogDescription or description }}">
+<meta property="og:image" content="{{ school.site.url }}{{ ogImage or '/assets/img/field-crossing-960.jpg' }}">
+<meta property="og:image:alt" content="{{ ogImageAlt or 'Jupe Hills pupils and staff during the school day' }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ ogTitle or title }}">
+<meta name="twitter:description" content="{{ ogDescription or description }}">
+<meta name="twitter:image" content="{{ school.site.url }}{{ ogImage or '/assets/img/field-crossing-960.jpg' }}">
+
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="icon" href="/assets/img/favicon-64.png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/fonts/bricolage-grotesque-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/style.css">
+
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "School",
+  "name": school.name,
+  "url": school.site.url,
+  "slogan": school.motto,
+  "email": school.email,
+  "telephone": [school.phones[0].international, school.phones[1].international, school.phones[2].international],
+  "foundingDate": school.founded,
+  "openingHours": school.hours.schema,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": school.address.line1,
+    "addressLocality": school.address.line2,
+    "addressRegion": "Mwanza",
+    "addressCountry": school.address.countryCode
+  },
+  "image": school.site.url + "/assets/img/field-crossing-960.jpg"
+} | json | safe }}
+</script>

@@ -1,0 +1,82 @@
+---
+layout: layouts/base.njk
+permalink: about.html
+navKey: about
+title: About us | Jupe Hills Pre & Primary School
+description: Learn about Jupe Hills Pre & Primary School, its values, inclusive community and Head Teacher in Ibaya, Ilalila, Mwanza.
+ogTitle: About Jupe Hills Pre & Primary School
+ogImage: /assets/img/whole-school-trees-960.jpg
+ogImageAlt: The Jupe Hills school community gathered beneath trees
+---
+<header class="page-head">
+  <div class="shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">About us</li></ol></nav>
+    <p class="eyebrow">Our school</p>
+    <h1>A welcoming place to learn and grow</h1>
+    <p class="intro">Jupe Hills is a co-educational school offering daycare, pre-primary and primary education in Ibaya, Ilalila, Mwanza.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="shell split">
+    <div>
+      <p class="section-kicker">Who we are</p>
+      <h2 class="section-title">A school built around every child</h2>
+      <p>Founded in {{ school.founded }}, Jupe Hills serves children from daycare and pre-primary through Primary Class 6.</p>
+      <p>We welcome children of all backgrounds, religions and communities, and every child is treated with respect.</p>
+    </div>
+    <figure>
+      <picture>
+        <source type="image/webp" srcset="/assets/img/whole-school-trees-480.webp 480w, /assets/img/whole-school-trees-960.webp 960w" sizes="(min-width: 820px) 520px, 92vw">
+        <img src="/assets/img/whole-school-trees-960.jpg" srcset="/assets/img/whole-school-trees-480.jpg 480w, /assets/img/whole-school-trees-960.jpg 960w" sizes="(min-width: 820px) 520px, 92vw" width="960" height="640" loading="lazy" alt="Jupe Hills students and teachers gathered together beneath trees at school">
+      </picture>
+      <figcaption>The Jupe Hills community together.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--wash">
+  <div class="shell">
+    <div class="feature-grid">
+      <article class="feature-card"><span class="feature-icon" aria-hidden="true">M</span><h2>Our mission</h2><p>To provide safe, attentive and practical education that builds strong foundations in learning, character and responsibility.</p></article>
+      <article class="feature-card"><span class="feature-icon" aria-hidden="true">V</span><h2>Our vision</h2><p>To see today’s learners grow into capable, kind and confident leaders in their families and communities.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <p class="section-kicker">What guides us</p>
+    <h2 class="section-title">Our core values</h2>
+    <div class="values-grid feature-grid--4">
+      <article class="value-card"><h3>Respect</h3><p>We listen, use kind words and value every person.</p></article>
+      <article class="value-card"><h3>Curiosity</h3><p>We ask questions and learn by doing.</p></article>
+      <article class="value-card"><h3>Responsibility</h3><p>We care for our work, one another and our environment.</p></article>
+      <article class="value-card"><h3>Inclusion</h3><p>We welcome children of all backgrounds, religions and communities.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--wash">
+  <div class="shell split">
+    <figure>
+      <picture>
+        <source type="image/webp" srcset="/assets/img/young-class-teachers-480.webp 480w, /assets/img/young-class-teachers-960.webp 960w" sizes="(min-width: 820px) 520px, 92vw">
+        <img src="/assets/img/young-class-teachers-960.jpg" srcset="/assets/img/young-class-teachers-480.jpg 480w, /assets/img/young-class-teachers-960.jpg 960w" sizes="(min-width: 820px) 520px, 92vw" width="960" height="640" loading="lazy" alt="Jupe Hills teachers standing with a class of younger students">
+      </picture>
+      <figcaption>Teachers and students in the Jupe Hills school community.</figcaption>
+    </figure>
+    <div>
+      <p class="section-kicker">A warm welcome</p>
+      <h2 class="section-title">From the Head Teacher</h2>
+      <p>Welcome to Jupe Hills. We are a school with a simple promise: your child will be known here. We teach children to read, count, ask questions and look after one another. Our doors are open to every family, whatever your religion or background. Come and see the school for yourself; you are welcome on any school day.</p>
+      <p><strong>{{ school.headTeacher }}</strong><br>Head Teacher</p>
+    </div>
+  </div>
+</section>
+
+{% set ctaTitle = "See Jupe Hills for yourself" %}
+{% set ctaText = "A visit is the best way to understand the school day and meet our team." %}
+{% set ctaSecondaryUrl = "/admissions.html" %}
+{% set ctaSecondaryLabel = "View admissions" %}
+{% include "partials/admission-cta.njk" %}

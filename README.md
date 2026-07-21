@@ -1,69 +1,103 @@
 # Jupe Hills Pre & Primary School website
 
-A fast, mobile-first static website for Jupe Hills Pre & Primary School in
-Ibaya, Buswelu, Mwanza. The site uses plain HTML, CSS and JavaScript, so it does
-not need a framework or build step.
+A lightweight Eleventy website for Jupe Hills Pre & Primary School in Ibaya,
+Ilalila, Mwanza. Shared layouts and verified school details are generated from
+one source while the existing visual identity remains plain HTML, CSS and
+dependency-free browser JavaScript.
 
-## Pages
+## Project structure
 
-- `index.html` — homepage
-- `about.html` — history, mission, values, leadership and facilities
-- `admissions.html` — entry requirements, process, fees, PDF and inquiry form
-- `academics.html` — programmes, subjects, teaching approach and calendar
-- `gallery.html` — filterable, keyboard-accessible photo gallery and lightbox
-- `parents.html` — policies, dates, uniform, fees and parent FAQ
-- `contact.html` — contact details, email form and lazy-loaded map
+- `src/*.njk` — source pages; each preserves its public `.html` URL
+- `src/_includes/layouts/` — shared page layout
+- `src/_includes/partials/` — head, navigation, footer, CTA and location blocks
+- `src/_data/school.json` — verified school details and deployment settings
+- `css/style.css` — shared responsive design
+- `js/main.js` — navigation, lightbox, reveal and back-to-top interactions
+- `assets/img/` — optimized image derivatives
+- `assets/raw/` — ignored local source media; never copied into production
+- `assets/docs/` — public joining instructions
+- `scripts/` — link, accessibility, responsive and Lighthouse checks
+- `_site/` — generated production output (ignored by Git)
 
-## Preview locally
+## Local development
 
-Open `index.html` directly in a browser, or start a small local server from this
-folder:
+Install Node.js 22 or newer, then run:
 
 ```powershell
-python -m http.server 8000
+npm install
+npm run dev
 ```
 
-Then open `http://localhost:8000`.
+Eleventy prints the local preview URL. Source changes rebuild automatically.
 
-## Replace content
+## Build and validation
 
-Search the project for `PLACEHOLDER:`. Every unconfirmed name, date, statistic,
-policy, event, fee, social link and profile is marked. A consolidated checklist
-is in `content/placeholders.md`.
+```powershell
+npm run build
+npm run check
+```
 
-The phone numbers, email address, postal address, location, intake ages,
-inclusive policy and interview rule come from the supplied school Joining
-Instructions Form.
+The production output is `_site/`. `npm run check` verifies formatting, builds
+the site, validates HTML, lints CSS and JavaScript, checks local links, runs axe
+smoke tests and checks all public pages for horizontal overflow at the approved
+viewport sizes.
 
-## Replace or add a photo
+Other useful commands:
 
-1. Put the original image in `assets/raw/`.
-2. Add its filename and output slug to `PHOTOS` in `scripts/build_images.py`.
-3. Install Pillow once with `python -m pip install Pillow`.
-4. Run `python scripts/build_images.py`.
-5. Use the new 480, 960 and 1600 pixel JPG/WebP files from `assets/img/`.
+- `npm run format` — format editable text files
+- `npm run validate` — build plus HTML, CSS, JavaScript and link checks
+- `npm run check:a11y` — serious/critical axe and runtime-error smoke checks
+- `npm run check:responsive` — all pages at 14 requested viewport sizes
+- `npm run audit:lighthouse` — Home, Admissions, Contact and Gallery audits
 
-Keep descriptive `alt` text, explicit width and height, responsive `srcset`, and
-`loading="lazy"` on every non-hero image.
+The browser checks use an installed Chrome/Edge locally. In CI, the workflow
+installs Playwright Chromium first.
 
-## Forms
+## Updating shared school details
 
-The contact and admissions forms validate in the browser and prepare a complete
-email to `nyagwaswafaith@gmail.com` in the visitor's email app. Newsletter forms
-validate and provide a local demo confirmation. Connect those forms to the
-school's chosen email/newsletter service before collecting subscriptions online.
+Edit only `src/_data/school.json` for reusable school information. It contains
+the school name, motto, profile figures, programmes, hours, Head Teacher name,
+address, Gmail address, all three phone/WhatsApp contacts, deployment URLs and
+map settings. The current primary CTA number is intentionally unchanged. Its
+data note reads “Primary admissions number awaiting final confirmation.”
 
-## Admissions download
+## Final domain update
 
-The verified scanned Joining Instructions Form is available at
-`assets/docs/jupe-hills-joining-instructions.pdf`.
+When the school purchases its final domain:
+
+1. Replace `site.url` in `src/_data/school.json`.
+2. Put the same value in `site.futureCustomDomain` for the project record.
+3. Run `npm run build` and `npm run check`.
+
+Canonical URLs, Open Graph URLs, JSON-LD, `sitemap.xml` and `robots.txt` all use
+`site.url`, so one edit updates every generated page.
+
+## Exact Google Maps location
+
+Do not enter approximate coordinates. After the school supplies the exact link
+and verified coordinates, update these fields in `src/_data/school.json`:
+
+```json
+"googleMapsUrl": "PASTE_EXACT_GOOGLE_MAPS_URL_HERE",
+"latitude": "VERIFIED_LATITUDE",
+"longitude": "VERIFIED_LONGITUDE"
+```
+
+When all three values exist, the shared location partial automatically replaces
+the temporary written-address block with the exact lazy-loaded map and link.
+At that time, change `frame-src 'none'` in `vercel.json` to
+`frame-src https://www.google.com` and rerun the full checks.
 
 ## Deployment
 
-This is a static site. Upload the whole folder to Netlify, Cloudflare Pages,
-GitHub Pages, or any ordinary HTTPS web host. On Netlify, the folder can be
-dragged into the Deploys area. On Cloudflare Pages, use no build command and set
-the output directory to the project root.
+`vercel.json` keeps the Vercel workflow: Vercel runs `npm run build` and
+publishes `_site/`. It also applies security headers and asset caching. The
+temporary canonical base is the verified production URL:
+`https://jupe-hills-schools.vercel.app`.
 
-After a real domain is connected, replace relative Open Graph image paths with
-absolute HTTPS URLs and add the final canonical URL to every page.
+## Media workflow
+
+Original photography stays in ignored `assets/raw/`. To create optimized
+derivatives, follow `scripts/build_images.py`, then reference responsive WebP
+and JPG variants from a source template. See `ASSET_AUDIT.md` before removing or
+changing any media.

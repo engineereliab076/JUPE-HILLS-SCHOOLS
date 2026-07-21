@@ -1,0 +1,8 @@
+{% if school.site.googleMapsUrl and school.site.latitude and school.site.longitude %}
+  <div class="map-frame map-frame--contact">
+    <iframe title="Map showing {{ school.name }}" src="https://www.google.com/maps?q={{ school.site.latitude }},{{ school.site.longitude }}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+  </div>
+  <a class="map-link map-link--button" href="{{ school.site.googleMapsUrl }}" rel="noopener">Open in Google Maps <span aria-hidden="true">↗</span></a>
+{% else %}
+  {% include "partials/location-pending.njk" %}
+{% endif %}
