@@ -318,10 +318,6 @@ a {
   white-space: nowrap;
 }
 
-.brand-name span {
-  display: inline;
-}
-
 .site-nav {
   display: flex;
   align-items: center;
@@ -464,9 +460,9 @@ a {
   }
 }
 
-@media (width <= 479px) {
-  .brand-name span {
-    display: none; /* keep just "Jupe Hills" beside the logo on tiny screens */
+@media (width <= 768px) {
+  .brand-name {
+    display: none; /* logo only on mobile; link keeps its aria-label for screen readers */
   }
 }
 
