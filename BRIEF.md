@@ -27,16 +27,21 @@ Audience: parents in Buswelu / Ilemela, Mwanza — mostly on Android phones, oft
 | Motto | Learners Today, Leaders Tomorrow |
 | Location | Ibaya, Ilalila, Shibula ward, Buswelu, Ilemela District, Mwanza Region, Tanzania |
 | Postal | S.L.P 735, Ilalila, Mwanza — Tanzania |
-| Phone 1 | +255 762 264 686 |
-| Phone 2 | +255 750 828 068 |
+| Founded | 2023 |
+| Head Teacher | Majogoro Sunday |
+| Students | 120 |
+| Staff | 12 |
+| Classes offered | Kindergarten to Class 6 |
+| School hours | Monday–Friday, 7:00 AM–4:00 PM |
+| Phone 1 | 0678 464 686 |
+| Phone 2 | 0750 828 068 |
+| Phone 3 | 0754 768 602 |
 | Email | nyagwaswafaith@gmail.com |
-| Daycare intake | Ages 2–5 |
-| Standard I intake | Ages 6–7 |
-| Entry rule | A child is interviewed before admission into Classes I, II, III and IV |
+| Entry rule | An interview or readiness assessment may be required before class placement. |
 | Character | Co-educational. Open to children of all kinds, all religions, and all races. The school believes all people are God's creation, and children are supported in belief according to their own religion. |
-| Uniform | Sky-blue tracksuit with white stripes, maroon shirt. Formal uniform: white shirt, maroon/red check skirt. |
+| Uniform | School uniform: white shirt with red checked detailing and red checked skirt. Sports and games uniform: blue tracksuit with maroon shirt. |
 
-Phone numbers must be real `tel:` links. WhatsApp links use the international format without `+` or spaces: `https://wa.me/255762264686`.
+Phone numbers must be real `tel:` links. All three numbers support calls and WhatsApp. WhatsApp links use the international format without `+` or spaces, for example `https://wa.me/255678464686`.
 
 ---
 
@@ -44,13 +49,7 @@ Phone numbers must be real `tel:` links. WhatsApp links use the international fo
 
 The client will swap these later. **Every one of these must be wrapped in a comment `<!-- PLACEHOLDER: replace with real value -->` and collected in a single `content/placeholders.md` file listing what needs replacing.** Do not scatter them where they can't be found.
 
-- Founded: **2016**
-- Head Teacher: **Ms. Faith Nyagwaswa** (the school email is `nyagwaswafaith@` — plausible, but unconfirmed. Flag it.)
-- Head Teacher's welcome message: write ~90 words, warm, plain, signed. No jargon, no "nurturing holistic learners in a 21st-century environment."
-- Pupils enrolled: **210**
-- Teaching staff: **14**
-- Classes offered: Daycare, Baby Class, Middle Class, Pre-Unit, Standard I–IV
-- School hours: Mon–Fri, 7:30 — 15:30. Daycare from 7:00.
+- Head Teacher biography, qualifications and portrait
 - Two short parent testimonials, first name + "parent, Standard II" style attribution.
 
 Do not invent: exam results, rankings, accreditation numbers, awards, or partnerships. Those are the claims that get a school in trouble if they're wrong. Leave them out entirely rather than placeholder them.
@@ -81,7 +80,7 @@ All originals are in `assets/raw/`. They are **enormous** — nine are 6000×400
 | `DSC_7528_JPG.jpeg` | Pupils and a teacher packed onto a green swing frame | Gallery |
 | `DSC_7532_JPG.jpeg` | Group with staff, an eland grazing behind them | Gallery |
 | `DSC_7545_JPG.jpeg` | Group with a visitor seated among pupils | Gallery, small |
-| `IMG_4018_jpg.jpeg` | Staff and pupils gathered, staff in white branded polos | About / staff |
+| `IMG_4018_jpg.jpeg` | Staff and pupils gathered, staff in white branded polos | About |
 | `g2_jpg.jpeg`, `g3_jpg.jpeg`, `g5_jpg.jpeg` | Zoo / enclosure scenes, monkeys, group at the shelter | Gallery, **small only — see warning below** |
 | `IMG-20230825-WA0079_jpg.jpeg` | Teacher with eight pupils by a green enclosure, relaxed and warm | Gallery — good human moment |
 | `IMG-20241201-WA0009_jpg.jpeg` | Award ceremony, pupil in formal uniform receiving a certificate from officials under a tent | **Achievements / ceremony block.** Portrait orientation — plan for it. |

@@ -39,9 +39,9 @@ blanket-processed.
 
 **Still missing** (recorded in `content/placeholders.md` only — no empty "coming soon"
 panels on the page; an advertised absence undermines a credibility site):
-school building/gate from outside · classroom interior with pupils working ·
-Head Teacher portrait. The Head Teacher welcome block is written but shipped
-commented-out in `index.html` until a real name and portrait exist.
+school building/gate from outside · classroom interior with students working ·
+Head Teacher portrait. The About-page welcome uses a school-community photograph
+alongside the verified Head Teacher name, Majogoro Sunday.
 
 ---
 

@@ -10,7 +10,6 @@ not need a framework or build step.
 - `about.html` — history, mission, values, leadership and facilities
 - `admissions.html` — entry requirements, process, fees, PDF and inquiry form
 - `academics.html` — programmes, subjects, teaching approach and calendar
-- `staff.html` — leadership, teaching staff and support staff
 - `gallery.html` — filterable, keyboard-accessible photo gallery and lightbox
 - `parents.html` — policies, dates, uniform, fees and parent FAQ
 - `contact.html` — contact details, email form and lazy-loaded map
