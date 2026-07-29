@@ -15,9 +15,10 @@
       <ul class="footer-contact-list">
         {% for phone in school.phones %}
           <li>
+            <span class="footer-contact-role">{{ phone.role }}</span>
             <a href="tel:{{ phone.international }}">{{ phone.display | nbsp }}</a>
             <span aria-hidden="true">·</span>
-            <a href="{{ phone.whatsapp }}">WhatsApp</a>
+            <a href="{{ phone.whatsapp }}" aria-label="Message the {{ phone.role }} on WhatsApp">WhatsApp</a>
           </li>
         {% endfor %}
       </ul>

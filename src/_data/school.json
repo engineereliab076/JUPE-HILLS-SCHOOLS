@@ -37,17 +37,20 @@
     {
       "display": "0678 464 686",
       "international": "+255678464686",
-      "whatsapp": "https://wa.me/255678464686"
+      "whatsapp": "https://wa.me/255678464686",
+      "role": "Headmaster"
     },
     {
       "display": "0750 828 068",
       "international": "+255750828068",
-      "whatsapp": "https://wa.me/255750828068"
+      "whatsapp": "https://wa.me/255750828068",
+      "role": "Academic Master"
     },
     {
       "display": "0754 768 602",
       "international": "+255754768602",
-      "whatsapp": "https://wa.me/255754768602"
+      "whatsapp": "https://wa.me/255754768602",
+      "role": "School Director"
     }
   ],
   "primaryAdmissions": {

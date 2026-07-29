@@ -54,6 +54,11 @@ PHOTOS = {
     "DSC_7545.JPG.jpeg": ("group-at-shelter", None),
     "IMG-20230825-WA0079.jpg.jpeg": ("enclosure-group", None),
     "IMG-20241201-WA0009.jpg.jpeg": ("award-ceremony", None),
+    "bembea.jpg": ("playground-mural", None),
+    "GARI-NO.1.jpg": ("school-van", None),
+    "weng.jpg": ("playground-roundabout", None),
+    "DARASA-LA-7.jpg": ("classroom-cheer", None),
+    "saba2.jpg": ("classroom-lineup", None),
 }
 
 LOGO = "WhatsApp Image 2026-07-15 at 1.57.24 PM.jpeg"
