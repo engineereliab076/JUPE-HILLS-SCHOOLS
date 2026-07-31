@@ -14,7 +14,7 @@ Primary conversion action: **phone call or WhatsApp**. Secondary: email.
 
 Language: **English only.**
 
-Audience: parents in Buswelu / Ilemela, Mwanza — mostly on Android phones, often on metered or slow data. **Mobile-first is not a nice-to-have here; assume most visitors arrive on a mid-range Android phone on 3G.** Performance is a credibility feature.
+Audience: parents in Ilemela, Mwanza — mostly on Android phones, often on metered or slow data. **Mobile-first is not a nice-to-have here; assume most visitors arrive on a mid-range Android phone on 3G.** Performance is a credibility feature.
 
 ---
 
@@ -25,7 +25,7 @@ Audience: parents in Buswelu / Ilemela, Mwanza — mostly on Android phones, oft
 | Full name       | Jupe Hills Pre & Primary School                                                                                                                                                                       |
 | Also known as   | Jupe Hills Daycare Pre & Primary School                                                                                                                                                               |
 | Motto           | Learners Today, Leaders Tomorrow                                                                                                                                                                      |
-| Location        | Ibaya, Ilalila, Shibula ward, Buswelu, Ilemela District, Mwanza Region, Tanzania                                                                                                                      |
+| Location        | Ibaya, Ilalila, Shibula ward, Ilemela District, Mwanza Region, Tanzania                                                                                                                               |
 | Postal          | S.L.P 735, Ilalila, Mwanza — Tanzania                                                                                                                                                                 |
 | Founded         | 2023                                                                                                                                                                                                  |
 | Head Teacher    | Majogoro Sunday                                                                                                                                                                                       |
@@ -110,13 +110,13 @@ The slots must look intentional when empty, not broken. Note them in `content/pl
 ### Home (single scroll)
 
 1. **Header** — logo, name, nav, phone number visible on desktop. Sticky, compact on scroll.
-2. **Hero** — school name, motto, one line of orientation ("A day-care, pre-primary and primary school in Ibaya, Buswelu — Mwanza"), call + WhatsApp buttons, hero photo.
+2. **Hero** — school name, motto, one line of orientation ("A day-care, pre-primary and primary school in Ibaya — Mwanza"), call + WhatsApp buttons, hero photo.
 3. **At a glance** — founded, pupils, staff, classes offered, hours. Four or five facts, no more.
 4. **Welcome from the Head Teacher** — portrait slot + signed message.
 5. **About** — who the school is. Use the real profile language: co-ed, all religions, all races, all kinds. This is a genuine and distinctive commitment; write it plainly and let it carry weight. Don't inflate it.
 6. **Programmes** — three cards: Daycare (2–5), Pre-primary, Primary (Standard I–IV). Each states ages and, for primary, the interview requirement.
 7. **Life at Jupe Hills** — photo strip, 6–8 images, links to full gallery. Include the Saanane Island trip and the award ceremony.
-8. **Visit us** — address, both phones, email, hours, embedded map or a static map image linking to Google Maps for Buswelu/Ilalila. **Use a static image or lazy-loaded iframe — a live Google Maps embed on 3G is a real cost.**
+8. **Visit us** — address, both phones, email, hours, embedded map or a static map image linking to Google Maps for Ilalila. **Use a static image or lazy-loaded iframe — a live Google Maps embed on 3G is a real cost.**
 9. **Footer** — contacts repeated, motto, postal address, copyright.
 
 ### /gallery
@@ -168,7 +168,7 @@ You are the design lead. Make deliberate choices, and read `frontend-design` gui
   - Semantic landmarks, one `h1` per page, correct heading order.
   - Colour contrast ≥ 4.5:1 for body text. Check maroon-on-blue combinations carefully — they will fail if you're careless.
   - Lighthouse: Performance ≥ 90 and Accessibility 100 on mobile throttling. Report the actual numbers.
-- **SEO / sharing:** title and meta description per page, Open Graph tags with a proper share image, and `LocalBusiness`/`School` JSON-LD with the real name, address, phone, and geo for Buswelu. This matters more than usual — the whole point is being findable.
+- **SEO / sharing:** title and meta description per page, Open Graph tags with a proper share image, and `LocalBusiness`/`School` JSON-LD with the real name, address, phone, and geo for the location. This matters more than usual — the whole point is being findable.
 - Favicon set from the logo.
 - `README.md`: how to run the image script, how to deploy to Netlify or Vercel drag-and-drop, and how to swap a photo. Written for someone who is not a developer.
 

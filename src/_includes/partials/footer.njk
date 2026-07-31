@@ -1,39 +1,39 @@
 <footer class="site-footer on-dark">
-  <div class="shell footer-grid">
-    <div>
-      <img src="/assets/img/logo-header.png" alt="" width="86" height="60" loading="lazy">
-      <p class="footer-motto">{{ school.motto }}</p>
-      <p>
-        {{ school.name }}<br>
-        {{ school.address.line1 }}<br>
-        {{ school.address.line2 }}<br>
-        {{ school.address.line3 }}
-      </p>
+  <div class="shell footer-contact-row">
+    <div class="footer-contact-item">
+      <span class="footer-contact-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M7 3H5a2 2 0 0 0-2 2c0 8.8 7.2 16 16 16a2 2 0 0 0 2-2v-2l-4-1-1 2c-4.3-1-7-3.7-8-8l2-1-1-4-2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+      </span>
+      <div class="footer-contact-text">
+        <span class="footer-contact-label">Call us</span>
+        <a class="footer-contact-value" href="tel:{{ school.phones[0].international }}">{{ school.phones[0].display | nbsp }}</a>
+      </div>
     </div>
-    <div>
-      <h2>Contact</h2>
-      <ul class="footer-contact-list">
-        {% for phone in school.phones %}
-          <li>
-            <span class="footer-contact-role">{{ phone.role }}</span>
-            <a href="tel:{{ phone.international }}">{{ phone.display | nbsp }}</a>
-            <span aria-hidden="true">·</span>
-            <a href="{{ phone.whatsapp }}" aria-label="Message the {{ phone.role }} on WhatsApp">WhatsApp</a>
-          </li>
-        {% endfor %}
-      </ul>
-      <p class="break-anywhere">{{ school.email }}</p>
+
+    <div class="footer-contact-item">
+      <span class="footer-contact-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M4 5h16v14H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path></svg>
+      </span>
+      <div class="footer-contact-text">
+        <span class="footer-contact-label">Email us</span>
+        <a class="footer-contact-value break-anywhere" href="mailto:{{ school.email }}">{{ school.email }}</a>
+      </div>
     </div>
-    <div>
-      <h2>Explore</h2>
-      <ul class="footer-links">
-        {% for item in school.navigation %}
-          {% if item.key != "home" %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endif %}
-        {% endfor %}
-      </ul>
+
+    <div class="footer-contact-item">
+      <span class="footer-contact-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-11a7 7 0 0 0-14 0c0 4.7 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"></circle></svg>
+      </span>
+      <div class="footer-contact-text">
+        <span class="footer-contact-label">School location</span>
+        <span class="footer-contact-value">Itaba, Ilalila, Mwanza</span>
+      </div>
     </div>
   </div>
-  <div class="shell footer-legal">
-    <p>© {{ year }} {{ school.name }}</p>
+
+  <div class="footer-legal">
+    <div class="shell">
+      <p>© {{ year }} {{ school.name }}. All rights reserved.</p>
+    </div>
   </div>
 </footer>
