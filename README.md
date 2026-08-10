@@ -92,8 +92,8 @@ At that time, change `frame-src 'none'` in `vercel.json` to
 
 `vercel.json` keeps the Vercel workflow: Vercel runs `npm run build` and
 publishes `_site/`. It also applies security headers and asset caching. The
-temporary canonical base is the verified production URL:
-`https://jupe-hills-schools.vercel.app`.
+canonical base is the production URL:
+`https://www.jupehillsschool.ac.tz`.
 
 ## Media workflow
 

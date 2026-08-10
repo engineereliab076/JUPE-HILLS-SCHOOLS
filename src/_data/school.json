@@ -59,12 +59,12 @@
     "note": "Primary admissions number awaiting final confirmation."
   },
   "site": {
-    "url": "https://jupe-hills-schools.vercel.app",
+    "url": "https://www.jupehillsschool.ac.tz",
     "futureCustomDomain": "",
     "googleMapsUrl": "",
     "latitude": null,
     "longitude": null,
-    "todo": "Replace the Vercel base URL when the custom domain is purchased; then update canonical, Open Graph and sitemap URLs. Add the exact Google Maps link and verified coordinates when supplied."
+    "todo": "Add the exact Google Maps link and verified coordinates when supplied."
   },
   "navigation": [
     { "key": "home", "label": "Home", "url": "/" },
