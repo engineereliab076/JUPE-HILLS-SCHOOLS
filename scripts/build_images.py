@@ -118,6 +118,7 @@ def key_out_black(img: Image.Image) -> Image.Image:
 
 def build_logo(src: Path) -> list[str]:
     report = []
+    favicon_source = None
     with Image.open(src) as img:
         img = ImageOps.exif_transpose(img)
         keyed = key_out_black(img)
@@ -144,6 +145,17 @@ def build_logo(src: Path) -> list[str]:
             path = OUT / name
             canvas.save(path, "PNG", optimize=True)
             report.append(f"{name}: {size}x{size} {path.stat().st_size // 1024} KB")
+
+            if size == 512:
+                favicon_source = canvas.copy()
+
+        favicon = OUT / "favicon.ico"
+        favicon_source.save(
+            favicon,
+            "ICO",
+            sizes=[(16, 16), (32, 32), (48, 48), (96, 96)],
+        )
+        report.append(f"{favicon.name}: 16/32/48/96px {favicon.stat().st_size // 1024} KB")
     return report
 
 

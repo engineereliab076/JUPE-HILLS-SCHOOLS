@@ -57,7 +57,7 @@ installs Playwright Chromium first.
 
 Edit only `src/_data/school.json` for reusable school information. It contains
 the school name, motto, profile figures, programmes, hours, Head Teacher name,
-address, Gmail address, all three phone/WhatsApp contacts, deployment URLs and
+address, public email address, all three phone/WhatsApp contacts, deployment URLs and
 map settings. The current primary CTA number is intentionally unchanged. Its
 data note reads “Primary admissions number awaiting final confirmation.”
 

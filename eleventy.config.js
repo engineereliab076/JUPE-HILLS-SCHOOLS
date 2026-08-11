@@ -13,6 +13,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets/img/logo-header.png");
   eleventyConfig.addPassthroughCopy("assets/img/favicon-*.png");
   eleventyConfig.addPassthroughCopy("assets/img/apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy({
+    "assets/img/favicon.ico": "favicon.ico",
+  });
 
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
 
